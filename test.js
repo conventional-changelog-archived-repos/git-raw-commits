@@ -132,7 +132,7 @@ it('should show your git-log command', function(done) {
   gitRawCommits({
     format: 'what%n%B',
     debug: function(cmd) {
-      expect(cmd).to.equal('Your git-log command is:\ngit log --format="what%n%B%n------------------------ >8 ------------------------" "HEAD" ');
+      expect(cmd).to.equal('Your git-log command is:\ngit log --tags --no-color --format="what%n%B%n------------------------ >8 ------------------------" "HEAD" ');
       done();
     }
   });
